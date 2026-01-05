@@ -5,7 +5,7 @@ from src.llm import analyze_competitors
 
 
 def render_header():
-    st.title("Amazon Competitor Analysis")
+    st.title("Amazon Analyser")
     st.caption("Enter your ASIN to get product insights.")
 
 
@@ -49,7 +49,7 @@ def render_product_card(product):
                 st.session_state["analyzing_asin"] = product["asin"]
 
 def main():
-    st.set_page_config(page_title="Amazon Competitor Analysis", page_icon="📚", layout="wide")
+    st.set_page_config(page_title="Amazon Analyser", page_icon="🔍", layout="wide")
     render_header()
     asin, geo, domain = render_inputs()
 

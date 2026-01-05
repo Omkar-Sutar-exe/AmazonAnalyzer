@@ -69,7 +69,7 @@ def analyze_competitors(asin):
         partial_variables={"format_instructions": parser.get_format_instructions()}
     )
 
-    llm = ChatOpenAI(model="gpt-4", temperature=0)
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
 
     chain = prompt | llm | parser
 
